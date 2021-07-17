@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>carousel</title>
+    <!-- CSS only -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  .hey{
+ font-size:13px;
+ letter-spacing:3px;
+ font-family:arial;
+ color:#14b5d9;
+ word-spacing:2px;
+ font-weight:bold;
+position: relative;
+ top:20%;
+}
+.ramya{
+ font-size:45px;
+ font-family:Georgia;
+ font-weight:bold;
+ position:relative;
+ top:28%;
+ letter-spacing:2px;
+}
+.im{
+font-size:20px;
+ font-family:arial;
+ font-weight:bold;
+ position:relative;
+ top:30%;
+letter-spacing:2px;
+}
+#text{
+font-size:25px;
+display:inline;
+border-right:4px solid #3989b1;
+animation:blink 1s infinite;
+font-family:arial;
+font-weight:bold;
+position:relative;
+top:30%;
+color:#14b5d9;
+text-decoration:underline;
+}
+@keyframes blink{
+  50%{
+    border-right:none;
+  }
+}
+.about_text{
+  font-size:60px;
+  font-weight: bold;
+}
+.img-responsive{
+position:relative;
+width:30%; 
+height:80%;
+float:left;
+}
+.drop-item{
+  background-color: grey;
+}
+.drop-item:hover{
+ background-color: darkgrey;
+}
+.nav-link:hover{
+  background-color: grey;
+}
+.img-thumbnail{
+  float:left;
+  position: relative;
+  left:10%;
+  top:7%;
+}
+.table{
+  position: relative;
+  top:10%;
+  overflow: hidden;
+}
+.table p{
+  position: relative;
+  left:10%;
+}
+</style>
+<body>
+  <nav class="navbar navbar-default navbar-fixed-top navbar-expand-lg navbar-dark bg-dark ">
+    <div class="container-fluid ">
+      <a class="navbar-brand" href="#">i @m</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDarkDropdown" aria-controls="navbarNavDarkDropdown" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse justify-content-end text-center" id="navbarNavDarkDropdown" >
+        <ul class="navbar-nav">
+          <li><a class="nav-link px-4" href="#home">Home</a></li>
+          <li><a class="nav-link px-4" href="#about">About</a></li>
+          <li class="nav-item dropdown">
+
+            <a class="nav-link dropdown-toggle px-4 text-center" href="#" id="navbarDarkDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+              Resume
+            </a>
+            <ul class="dropdown-menu dropdown-menu-dark text-center " aria-labelledby="navbarDarkDropdownMenuLink">
+              <li><a class="dropdown-item " href="#">Education</a></li>
+              <li><a class="dropdown-item" href="#">Experience</a></li>
+              <li><a class="dropdown-item" href="#">Skills</a></li>
+            </ul>
+          </li>
+          <li><a class="nav-link px-4" href="#">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <div class="jumbotron text-center" style="height:600px; background-color: rgb(235, 241, 241); z-index: -1; position: ab;" id="home">
+    <p class="hey">HEY! I AM</p>
+   <p class="ramya">RAMYA VANGAPALLA</p>
+   <p class="im">i'm a </p>
+   <p id="text"></p>
+        <script type="text/javascript">
+        var i=0;
+         var text="Web Developer."
+        var speed=150;
+        function typing()
+        { 
+        if(i<text.length){
+          document.getElementById("text").innerHTML+=text.charAt(i);
+        i++;
+        setTimeout(typing,speed);
+        }
+        }
+        typing();
+        </script>	 
+   </div>
+   <section  class="section section-lg pt-0 mt-150">
+    
+     <div class="jumbotron text-center" style="height:600px; background-color: darkgray; " id="about">
+        <p class="about_text">About me</p>
+        <img src="C:\Users\Lord_Stark\Desktop\WDT\pink pic.jpg" alt="..." class="img-thumbnail" width="300px" height="400px">
+        <div class="table">
+       <label>Name:</label>
+       <p>Ramya Vangapalla</p>
+       <label>DOB</label>
+       <p>28-02-2002</p>
+       <label>Email Address:</label>
+       <p>ramyavangapalla0018@gmail.com</p>
+       <label>Contact:</label>
+       <p>+91 9390399682</p>
+        </div>
+     </div>
+    
+    </section>
+   <!-- JavaScript Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> 
+</body>
+</html>
